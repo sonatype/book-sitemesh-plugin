@@ -38,4 +38,15 @@
     	<version>1.4</version>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>forge-snapshots</id>
+      <name>Sonatype Forge Snapshots</name>
+      <url>https://repository.sonatype.org/content/repositories/snapshots/</url>
+    </repository>
+     <site>
+      <id>forge-releases</id>
+      <url>https://repository.sonatype.org/content/repositories/releases/</url>
+    </site>
+  </distributionManagement>
 </project>
