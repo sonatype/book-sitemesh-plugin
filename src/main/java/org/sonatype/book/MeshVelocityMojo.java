@@ -45,6 +45,14 @@ public class MeshVelocityMojo extends AbstractMojo {
 	 */
 	private String bookTitle;
 
+	/**
+	 * Book ID
+	 * 
+	 * @parameter
+	 * @required
+	 */
+	private String bookId;
+
 	public void execute() throws MojoExecutionException {
 
 		// Create a filter for Non-hidden directories
@@ -54,6 +62,7 @@ public class MeshVelocityMojo extends AbstractMojo {
 
 		Properties properties = new Properties();
 		properties.put( "bookTitle", bookTitle);
+		properties.put( "bookId", bookId);
 		
 		ContentHandler handler = new ContentHandler(fooDirFilter,
 				FileFilterUtils.suffixFileFilter(".html"), -1,
